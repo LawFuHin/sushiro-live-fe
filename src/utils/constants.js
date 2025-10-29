@@ -25,6 +25,7 @@ export const NET_TICKET_STATUS = {
 // Queue types
 export const QUEUE_TYPES = {
   STORE: "storeQueue",
+  MIXED:"mixedQueue",
   BOOTH: "boothQueue",
   RESERVATION: "reservationQueue",
 };

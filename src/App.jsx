@@ -44,6 +44,7 @@ function App() {
     if (!queueData) return null;
 
     return {
+      mixed: getQueueNumbersWithPlaceholder(queueData.mixedQueue),
       store: getQueueNumbersWithPlaceholder(queueData.storeQueue),
       booth: getQueueNumbersWithPlaceholder(queueData.boothQueue),
       reservation: getQueueNumbersWithPlaceholder(queueData.reservationQueue),
@@ -83,17 +84,17 @@ function App() {
                   : "即將要帶位的號碼:"}
               </h1>
               <QueueSection
-                title="吧檯 / 卡位 都可以"
-                subtitle="Counter / booth"
+                title="下一組顧客"
+                subtitle="Queue"
                 queueNumbers={
                   queueDisplayData?.store || ["&nbsp;", "&nbsp;", "&nbsp;"]
                 }
               />
               <QueueSection
-                title="卡位"
-                subtitle="Booth"
+                title="吧檯 / 卡位"
+                subtitle="Counter / booth"
                 queueNumbers={
-                  queueDisplayData?.booth || ["&nbsp;", "&nbsp;", "&nbsp;"]
+                  queueDisplayData?.mixed || ["&nbsp;", "&nbsp;", "&nbsp;"]
                 }
               />
               <QueueSection
