@@ -1,0 +1,8 @@
+.ticket-container {
+  border: 1px solid grey;
+}
+.suspended-container {
+  border: 5px solid rgb(141, 29, 38);
+  background-color: rgb(160, 36, 21);
+  color: white;
+}
